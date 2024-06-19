@@ -1,6 +1,7 @@
 package com.example.rpt;
 
 import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
 import net.sf.jasperreports.engine.export.ooxml.JRXlsxExporter;
@@ -47,6 +48,19 @@ public class ReportGenerator {
 //            ...
 //            //
 //            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new JREmptyDataSource());
+
+
+//            // Tus DTOs
+//            List<MyDto> myDtos = ...
+//
+//// Crear JRDataSource
+//            JRDataSource dataSource = new JRBeanCollectionDataSource(myDtos);
+//
+//// Puebla el reporte con la fuente de datos
+//            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, new HashMap<>(), dataSource);
+//
+//// generar el pdf
+//            JasperExportManager.exportReportToPdfFile(jasperPrint, "ruta/hacia/report.pdf");
 
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, new HashMap<>(), conn);
 
